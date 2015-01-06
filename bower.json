@@ -25,10 +25,10 @@
     "bootstrap": {
       "css": ["*dist/css/*.min.css", "dist/css/*.map"],
       "fonts": "dist/fonts/*.*",
-      "js": ["dist/js/*.min.js", "dist/js/*.map"]
+      "scripts": ["dist/js/*.min.js", "dist/js/*.map"]
       },
     "jquery": {
-      "js": ["dist/*.min.js", "dist/*.map"]
+      "scripts": ["dist/*.min.js", "dist/*.map"]
       }
     },
   "dependencies": {
