@@ -5,6 +5,6 @@ description:
 baseurl: 
 url:  
 github_username:  jhenriquez
-exclude: ['components']
+exclude: ['components', 'node_modules', 'Gruntfile.js', 'package.json', 'bower.json']
 # Build settings
 markdown: kramdown
