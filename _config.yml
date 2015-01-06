@@ -5,6 +5,6 @@ description:
 baseurl: 
 url:  
 github_username:  jhenriquez
-
+exclude: ['components']
 # Build settings
 markdown: kramdown
