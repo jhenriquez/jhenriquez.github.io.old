@@ -1,0 +1,28 @@
+{
+  "name": "jhenriquez.github.io",
+  "version": "0.1.0",
+  "description": "Personal Github Page",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jhenriquez/jhenriquez.github.io"
+  },
+  "keywords": [
+    "Personal",
+    "Blog",
+    "Github",
+    "Page"
+  ],
+  "author": "Julio Henriquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhenriquez/jhenriquez.github.io/issues"
+  },
+  "homepage": "https://github.com/jhenriquez/jhenriquez.github.io",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bower-task": "~0.4.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "jhenriquez.github.io",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jhenriquez/jhenriquez.github.io",
+  "authors": [
+    "Julio Henriquez <julio.m.henriquez@gmail.com>"
+  ],
+  "description": "Personal Github Page",
+  "keywords": [
+    "Blog",
+    "Personal",
+    "Github Page"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "exportsOverride": {
+    "bootstrap": {
+      "css": ["*dist/css/*.min.css", "dist/css/*.map"],
+      "fonts": "dist/fonts/*.*",
+      "js": ["dist/js/*.min.js", "dist/js/*.map"]
+      },
+    "jquery": {
+      "js": ["dist/*.min.js", "dist/*.map"]
+      }
+    },
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "jquery": "~2.1.3"
+  }
+}
