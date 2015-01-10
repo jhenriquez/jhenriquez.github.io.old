@@ -1,0 +1,32 @@
+---
+
+---
+
+$colors-smog: 	#82938A;
+$colors-seron: 	#4A4A45;
+$colors-sit: 	#999287;
+$colors-kiezel: #C3CBAC;
+$colors-cake: 	#FCA366;
+
+.smog-row {
+  background-color: $colors-smog;
+}
+
+.kiezel-row {
+	background-color: $colors-kiezel;
+}
+
+.cake-row {
+	background-color: $colors-cake;	
+}
+
+.seron-row {
+	background-color: $colors-seron;
+}
+
+.col-content {
+	margin-top: 10em;
+	margin-bottom: 10em;
+	font-weight: bold;
+	text-align: center;
+}
