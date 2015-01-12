@@ -14,14 +14,17 @@ $colors-cake: 	#FCA366;
 }
 
 .kiezel-row {
+  height: 100%;
   background-color: $colors-kiezel;
 }
 
 .cake-row {
+  height: 100%;
   background-color: $colors-cake;	
 }
 
 .seron-row {
+  height: 100%;
   background-color: $colors-seron;
 }
 
@@ -45,4 +48,9 @@ $colors-cake: 	#FCA366;
 
 .viewport {
   height: 100%
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
 }
