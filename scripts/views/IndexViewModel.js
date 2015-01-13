@@ -13,7 +13,7 @@ define(function () {
 	$(window).on('scroll', scrolling);
 
 	function scrolling (e) {
-		var section = $(window.location.hash || '#Section1');
+		var section = $(window.location.hash || '#Section1');		
 		var currentSectionTop = section.offset().top;		
 		var newTop = $(window).scrollTop();
 
@@ -27,7 +27,8 @@ define(function () {
 			return; // Nothing to do here!
 		}
 
-		scrollTo(nextSection.offset().top, nextSection.attr('id'));
+		scrollTo(nextSection.offset().top);
+		window.location.hash = nextSection.attr('id');
 	}
 	
 	$('div .row').swipe({ swipe: handleSwipeUpDown }, 0);
@@ -45,13 +46,13 @@ define(function () {
 						   index === sections.length - 1 ? sections[index] : sections[++index]
 						 : index === 0 ? sections[index] : sections[--index];
 
-		scrollTo(nextSection.offset().top, nextSection.attr('id'));
+		scrollTo($(nextSection).offset().top);
+		window.location.hash = nextSection;
 	}
 
-	function scrollTo(top, section) {
+	function scrollTo(top) {
 		$(window).off('scroll', scrolling);
 		$('html, body').animate({'scrollTop': top }, 500, 'swing', function () {
-			if (section) { window.location.hash = section; }
 			$(window).on('scroll', scrolling);
 		});
 	}
