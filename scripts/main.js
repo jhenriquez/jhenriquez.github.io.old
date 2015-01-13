@@ -5,7 +5,3 @@ requirejs.config({
 		bootstrap: 'bootstrap.min'
 	}
 });
-
-requirejs(['jquery'], function() {
-	requirejs(['bootstrap']);
-});
