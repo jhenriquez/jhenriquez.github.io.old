@@ -47,10 +47,33 @@ $colors-cake: 	#FCA366;
 }
 
 .viewport {
-  height: 100%
+  
+}
+
+.container-fluid {
+  height: 100%;	
 }
 
 html, body {
 	height: 100%;
 	min-height: 100%;
+}
+
+.nav-container {
+  z-index:3;
+  position: fixed;
+  width: 100%;
+}
+
+nav {
+  text-align: center;
+}
+
+nav li {
+	display:inline;
+}
+
+nav li a {
+	color: #fff;
+	text-decoration: none;
 }
