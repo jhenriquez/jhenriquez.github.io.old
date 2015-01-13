@@ -1,5 +1,5 @@
 requirejs(['../main'], function() {
-	requirejs(['jquery'], function () {
+	requirejs(['jquery', 'touchswipe'], function () {
 		requirejs(['bootstrap'], function () {
 			requirejs(['views/IndexViewModel']);
 		});
