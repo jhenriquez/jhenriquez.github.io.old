@@ -1,5 +1,6 @@
 define(function () {
 	var sections = [];
+	var scrolling = false;
 
 	$('div .row').each(function () {
 		sections.push('#' + $(this).attr('id'));
@@ -10,9 +11,11 @@ define(function () {
 		scrollTo($(section).offset().top);
 	});
 
-	$(window).on('scroll', scrolling);
+	$(window).scroll(function (e) {
+		if (scrolling) {
+			return; // Nothing to do here!
+		}
 
-	function scrolling (e) {
 		var section = $(window.location.hash || '#Section1');		
 		var currentSectionTop = section.offset().top;		
 		var newTop = $(window).scrollTop();
@@ -29,7 +32,7 @@ define(function () {
 
 		scrollTo(nextSection.offset().top);
 		window.location.hash = nextSection.attr('id');
-	}
+	});
 	
 	$('div .row').swipe({ swipe: handleSwipeUpDown }, 0);
 
@@ -51,9 +54,9 @@ define(function () {
 	}
 
 	function scrollTo(top) {
-		$(window).off('scroll', scrolling);
+		scrolling = true;
 		$('html, body').animate({'scrollTop': top }, 500, 'swing', function () {
-			$(window).on('scroll', scrolling);
+			scrolling = false;
 		});
 	}
 });
