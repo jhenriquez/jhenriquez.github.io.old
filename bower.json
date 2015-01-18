@@ -34,14 +34,17 @@
       ]
     },
     "jquery": {
-      "scripts": [
+      "scripts/jquery": [
         "dist/*.min.js",
         "dist/*.map"
       ]
     },
-    "jquery-touchswipe": {
-      "scripts": [
+    "fullpage": {
+      "scripts/jquery": [
         "*.min.js"
+      ],
+      "css": [
+        "*.css"
       ]
     },
     "*": {
@@ -54,6 +57,6 @@
     "bootstrap": "~3.3.1",
     "jquery": "~2.1.3",
     "requirejs": "~2.1.15",
-    "jquery-touchswipe": "~1.6.6"
+    "fullpage": "~2.5.4"
   }
 }
