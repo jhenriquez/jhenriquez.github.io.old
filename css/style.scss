@@ -23,20 +23,32 @@ $colors-cake: 	#FCA366;
 }
 
 .nav-container {
-  z-index:3;
+  z-index: 3;
   position: fixed;
+  top: 30px;
+  left: 10px;
   width: 100%;
 }
 
 nav {
-  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
 }
 
-nav li {
-	display:inline;
+nav div {
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid;
+  margin: 5px;
+}
+
+nav div.active {
+  background-color: #fff;
 }
 
 nav li a {
-	color: #fff;
-	text-decoration: none;
+  color: inherit;
+	
 }
