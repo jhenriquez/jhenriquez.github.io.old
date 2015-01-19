@@ -26,13 +26,12 @@ $colors-cake: 	#FCA366;
   z-index: 3;
   position: fixed;
   top: 30px;
-  left: 10px;
-  width: 100%;
+  right: 20px;
 }
 
-nav {
-  width: 1.5em;
-  height: 1.5em;
+nav#in-page-menu {
+  width: 20px;
+  height: 20px;
 }
 
 nav div {
