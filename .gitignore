@@ -4,6 +4,6 @@ _site
 
 node_modules/
 
-module-cache/
+.module-cache/
 
-components/
+_components/
