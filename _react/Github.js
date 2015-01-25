@@ -18,7 +18,7 @@ define(['react'], function (React) {
             description: rep.description,
             language: rep.language,
             url: rep.html_url,
-            lastUpdate: rep.updated_at
+            lastUpdate: moment ? new moment(rep.updated_at).fromNow() : rep.updated_at
           };
         });
 
@@ -55,7 +55,7 @@ define(['react'], function (React) {
       });
 
       return (
-        <div className="text-center">
+        <div id="repositories-container">
           {repositories}
         </div>
         );
