@@ -171,6 +171,10 @@ nav li a {
 }
 
 @media (max-width: 800px){
+  .repository {
+    max-width: 60%;
+  }
+
   .repository-section-description {
     display: none;
   }
