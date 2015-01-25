@@ -55,7 +55,7 @@ define(['react'], function (React) {
       });
 
       return (
-        React.createElement("div", {id: "repositories-container"}, 
+        React.createElement("div", null, 
           repositories
         )
         );

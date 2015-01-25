@@ -55,7 +55,7 @@ define(['react'], function (React) {
       });
 
       return (
-        <div id="repositories-container">
+        <div>
           {repositories}
         </div>
         );
