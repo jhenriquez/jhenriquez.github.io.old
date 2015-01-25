@@ -13,6 +13,7 @@ define(['react'], function (React) {
 
         var reps = repos.slice(0, self.props.repositories || 4).map(function (rep) {
           return {
+            id: rep.id,
             name: rep.name,
             description: rep.description,
             language: rep.language,
@@ -28,10 +29,7 @@ define(['react'], function (React) {
     render: function () {
       if (this.state.repos.length === 0) {
         return (
-          React.createElement("div", {className: "text-center"}, 
-            React.createElement("div", {className: "col-xs-12 col-sm-12 col-md-12 col-lg-12"}, 
-              React.createElement("h1", null, "Nothing to see here...")
-            )
+          React.createElement("div", {className: "loading-icon rotate"}
           )
           );
       }
@@ -40,13 +38,13 @@ define(['react'], function (React) {
 
       this.state.repos.forEach(function (repository) {
         repositories.push(
-          React.createElement("a", {href: repository.url}, 
-            React.createElement("div", {className: "col-xs-12 col-sm-12 col-md-3 col-lg-3"}, 
-              React.createElement("h2", null, repository.name), 
-              React.createElement("p", null, repository.description), 
-              React.createElement("h3", null, repository.language)
+            React.createElement("div", {key: repository.id, className: "repository"}, 
+              React.createElement("img", {className: "repository-icon", src: "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"}), 
+              React.createElement("a", {className: "repository-name", href: repository.url}, repository.name), 
+              React.createElement("p", null, 
+                repository.description
+              )
             )
-          )
           );
       });
 

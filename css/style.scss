@@ -116,3 +116,20 @@ nav div.active {
 nav li a {
   color: inherit;
 }
+
+.repository {
+  float: left;
+  border: 1px solid;
+  width: 250px;
+}
+
+.repository-name {
+  text-align: left;
+  border: 1px solid;
+}
+
+.repository-icon {
+  float: left;
+  width: 30px;
+  height: 30px;  
+}

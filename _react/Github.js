@@ -13,6 +13,7 @@ define(['react'], function (React) {
 
         var reps = repos.slice(0, self.props.repositories || 4).map(function (rep) {
           return {
+            id: rep.id,
             name: rep.name,
             description: rep.description,
             language: rep.language,
@@ -28,10 +29,7 @@ define(['react'], function (React) {
     render: function () {
       if (this.state.repos.length === 0) {
         return (
-          <div className="text-center">
-            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h1>Nothing to see here...</h1>
-            </div>
+          <div className="loading-icon rotate">
           </div>
           );
       }
@@ -40,13 +38,13 @@ define(['react'], function (React) {
 
       this.state.repos.forEach(function (repository) {
         repositories.push(
-          <a href={repository.url}>
-            <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-              <h2>{repository.name}</h2>
-              <p>{repository.description}</p>
-              <h3>{repository.language}</h3>
+            <div key={repository.id} className="repository">              
+              <img className="repository-icon" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" />
+              <a className="repository-name" href={repository.url}>{repository.name}</a>
+              <p>
+                {repository.description}
+              </p>              
             </div>
-          </a>
           );
       });
 
