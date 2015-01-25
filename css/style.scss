@@ -119,13 +119,31 @@ nav li a {
 
 .repository {
   float: left;
-  border: 1px solid;
-  width: 250px;
+  width: 350px;
+  height: 100px;
+  margin: auto;
 }
 
 .repository-name {
   text-align: left;
-  border: 1px solid;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.repository-description {
+  clear:both;
+  font-size: 16px;
+  text-align: left;
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.repository-last-update {
+  clear:both;
+  font-size: 13px;
+  margin-left: 5px;
+  text-align: left;
 }
 
 .repository-icon {

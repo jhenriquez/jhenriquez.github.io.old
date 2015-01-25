@@ -17,7 +17,8 @@ define(['react'], function (React) {
             name: rep.name,
             description: rep.description,
             language: rep.language,
-            url: rep.html_url
+            url: rep.html_url,
+            lastUpdate: rep.updated_at
           };
         });
 
@@ -40,9 +41,14 @@ define(['react'], function (React) {
         repositories.push(
             React.createElement("div", {key: repository.id, className: "repository"}, 
               React.createElement("img", {className: "repository-icon", src: "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"}), 
-              React.createElement("a", {className: "repository-name", href: repository.url}, repository.name), 
-              React.createElement("p", null, 
+              React.createElement("div", {className: "repository-name"}, 
+                React.createElement("a", {href: repository.url}, repository.name)
+              ), 
+              React.createElement("p", {className: "repository-description"}, 
                 repository.description
+              ), 
+              React.createElement("p", {className: "repository-last-update"}, 
+                "Last Updated: ", repository.lastUpdate
               )
             )
           );

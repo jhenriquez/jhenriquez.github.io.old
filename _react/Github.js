@@ -17,7 +17,8 @@ define(['react'], function (React) {
             name: rep.name,
             description: rep.description,
             language: rep.language,
-            url: rep.html_url
+            url: rep.html_url,
+            lastUpdate: rep.updated_at
           };
         });
 
@@ -40,10 +41,15 @@ define(['react'], function (React) {
         repositories.push(
             <div key={repository.id} className="repository">              
               <img className="repository-icon" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" />
-              <a className="repository-name" href={repository.url}>{repository.name}</a>
-              <p>
+              <div className="repository-name">
+                <a href={repository.url}>{repository.name}</a>
+              </div>
+              <p className="repository-description">
                 {repository.description}
-              </p>              
+              </p>
+              <p className="repository-last-update">
+                Last Updated: {repository.lastUpdate}
+              </p>
             </div>
           );
       });
