@@ -139,7 +139,6 @@ nav li a {
   float: left;
   width: 350px;
   height: 100px;
-  margin: auto;
 }
 
 .repository-name {
@@ -172,7 +171,8 @@ nav li a {
 
 @media (max-width: 800px){
   .repository {
-    max-width: 60%;
+    max-width: 80%;
+    height: 100px;
   }
 
   .repository-section-description {
