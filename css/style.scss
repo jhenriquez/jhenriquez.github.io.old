@@ -2,13 +2,7 @@
 
 ---
 
-$colors-smog: 	#82938A;
-$colors-seron: 	#4A4A45;
-$colors-sit: 	#999287;
-$colors-kiezel: #C3CBAC;
-$colors-cake: 	#FCA366;
-
-#Section1 {
+#hello {
   background-color: #97CCEE;
 }
 
@@ -18,6 +12,66 @@ $colors-cake: 	#FCA366;
 
 #Other {
   background-color: #1CBABC;
+}
+
+.loading-screen {
+  z-index:4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF; 
+}
+
+@-webkit-keyframes rotation {
+  from { 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  from { 
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loading-icon {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 auto;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+.rotate {
+  -webkit-animation: rotation 2s linear infinite;
+  -moz-animation: rotation 2s linear infinite;
+  -ms-animation: rotation 2s linear infinite;
+  -o-animation: rotation 2s linear infinite;
+  animation: rotation 2s linear infinite;
 }
 
 .col-content {
@@ -61,5 +115,4 @@ nav div.active {
 
 nav li a {
   color: inherit;
-	
 }
