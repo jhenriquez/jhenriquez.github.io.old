@@ -68,7 +68,7 @@ define(['react', 'momentjs'], function (React, moment) {
           <div className="loading-icon rotate"></div>
           );
       }
-      var self = this;
+
       var repositories = [];
       
 
@@ -83,21 +83,21 @@ define(['react', 'momentjs'], function (React, moment) {
               <div className="repository-name">
                 <a href={repository.url}>{repository.name}</a>
               </div>
+              <p className="repository-last-update">
+                Last Updated: {repository.lastUpdate}
+              </p>
               <p className="repository-description">
                 {repository.description}
               </p>
               <ul className="repository-languages">
                 {langs}
               </ul>
-              <p className="repository-last-update">
-                Last Updated: {repository.lastUpdate}
-              </p>
             </div>
           );
       });
 
       return (
-        <div>
+        <div className="repositories-container">
           {repositories}
         </div>
         );

@@ -68,7 +68,7 @@ define(['react', 'momentjs'], function (React, moment) {
           React.createElement("div", {className: "loading-icon rotate"})
           );
       }
-      var self = this;
+
       var repositories = [];
       
 
@@ -83,21 +83,21 @@ define(['react', 'momentjs'], function (React, moment) {
               React.createElement("div", {className: "repository-name"}, 
                 React.createElement("a", {href: repository.url}, repository.name)
               ), 
+              React.createElement("p", {className: "repository-last-update"}, 
+                "Last Updated: ", repository.lastUpdate
+              ), 
               React.createElement("p", {className: "repository-description"}, 
                 repository.description
               ), 
               React.createElement("ul", {className: "repository-languages"}, 
                 langs
-              ), 
-              React.createElement("p", {className: "repository-last-update"}, 
-                "Last Updated: ", repository.lastUpdate
               )
             )
           );
       });
 
       return (
-        React.createElement("div", null, 
+        React.createElement("div", {className: "repositories-container"}, 
           repositories
         )
         );

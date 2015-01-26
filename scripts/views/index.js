@@ -1,6 +1,6 @@
 require(['../main'], function () {
   require(
-    ['jquery','bootstrap', 'fullpage','views/components/Github'],
+    ['jquery','fullpage','views/components/Github'],
     function ($) {
 
       $('#content').fullpage({
