@@ -212,7 +212,7 @@ nav li a {
   margin: auto;
 }
 
-.fa:hover {
+.rotate-once:hover {
   font-size: 50px;
   -webkit-animation: rotation 0.5s linear 1;
   -moz-animation: rotation 0.5s linear 1;
@@ -224,7 +224,7 @@ nav li a {
 @media (max-width: 720px){
   .repository {
     display: inline-block;
-    height: 20%;
+    height: 10%;
     width: 250px;
     margin: auto;
   }
