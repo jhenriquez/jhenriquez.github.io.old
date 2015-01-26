@@ -57,6 +57,14 @@
         "min/moment-with-locales.min.js"
       ]
     },
+    "font-awesome": {
+      "css": "css/font-awesome.min.css",
+      "fonts": "fonts/*.*"
+    },
+    "font-mfizz": {
+      "css": "css/*.css",
+      "fonts": "fonts/*.*"
+    },
     "*": {
       "scripts": [
         "*.js"
@@ -69,6 +77,8 @@
     "requirejs": "~2.1.15",
     "fullpage": "~2.5.4",
     "react": "~0.12.2",
-    "momentjs": "~2.9.0"
+    "momentjs": "~2.9.0",
+    "font-awesome": "~4.3.0",
+    "font-mfizz": "~2.0.0"
   }
 }

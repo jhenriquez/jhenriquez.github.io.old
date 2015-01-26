@@ -58,12 +58,16 @@ define(['react', 'momentjs'], function (React, moment) {
     render: function () {
       if (this.state.repos.length === 0) {
         return (
-          React.createElement("div", {className: "loading-icon rotate"}
-          )
+          React.createElement("div", {className: "loading-icon rotate"})
           );
       }
 
+      var repositoryIcon = this.props.useLanguageIcons ?
+          (React.createElement("i", {className: "fa fa-github fa-2x repository-icon"}))
+          : (React.createElement("img", {className: "repository-icon", src: "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"}));
+
       var repositories = [];
+      
 
       this.state.repos.forEach(function (repository, rep_index) {
         var langs = repository.languages.map(function (lang, lang_index) {
@@ -74,7 +78,7 @@ define(['react', 'momentjs'], function (React, moment) {
 
         repositories.push(
             React.createElement("div", {key: rep_index, className: "repository"}, 
-              React.createElement("img", {className: "repository-icon", src: "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"}), 
+              repositoryIcon, 
               React.createElement("div", {className: "repository-name"}, 
                 React.createElement("a", {href: repository.url}, repository.name)
               ), 
@@ -105,7 +109,7 @@ define(['react', 'momentjs'], function (React, moment) {
   });
 
   React.render(
-    React.createElement(Github, {username: "jhenriquez", repositories: "4", icon: "batida"}),
+    React.createElement(Github, {username: "jhenriquez", repositories: "4", useLanguageIcons: true}),
     document.getElementById('github-content')
     );
 });
