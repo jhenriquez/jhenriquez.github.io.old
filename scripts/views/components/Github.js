@@ -53,7 +53,7 @@ define(['react', 'momentjs'], function (React, moment) {
     },
     componentDidMount: function () {
       this.updateRepositories();
-      setTimeout(this.updateRepositories, 60000);
+      setInterval(this.updateRepositories, 60000);
     },
     render: function () {
       if (this.state.repos.length === 0) {
