@@ -1,5 +1,12 @@
 define(['react', 'momentjs'], function (React, moment) {
 
+  var languageClassMap = {
+    'C#': 'icon-csharp',
+    'JavaScript': 'icon-javascript',
+    'CSS': 'icon-css',
+    'Ruby': 'icon-ruby'
+  };
+
   var Github = React.createClass({
     
     getInitialState: function () {
@@ -61,38 +68,27 @@ define(['react', 'momentjs'], function (React, moment) {
           <div className="loading-icon rotate"></div>
           );
       }
-
-      var repositoryIcon = this.props.useLanguageIcons ?
-          (<i className="fa fa-github fa-2x repository-icon"></i>)
-          : (<img className="repository-icon" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png" />);
-
+      var self = this;
       var repositories = [];
       
 
       this.state.repos.forEach(function (repository, rep_index) {
         var langs = repository.languages.map(function (lang, lang_index) {
-            return(
-              <li key={lang_index}>{lang}</li>
-              );
+            return (<i key={lang_index} className={languageClassMap[lang]} title={lang}></i>);
         });
 
         repositories.push(
             <div key={rep_index} className="repository">
-              {repositoryIcon}
+              <i className="fa fa-github fa-2x repository-icon"></i>
               <div className="repository-name">
                 <a href={repository.url}>{repository.name}</a>
               </div>
               <p className="repository-description">
                 {repository.description}
               </p>
-              <div>
-                <div className="repository-languages">
-                Languages:
-                </div>
-                <ul className="repository-languages">
-                  {langs}
-                </ul>
-              </div>
+              <ul className="repository-languages">
+                {langs}
+              </ul>
               <p className="repository-last-update">
                 Last Updated: {repository.lastUpdate}
               </p>
@@ -109,7 +105,7 @@ define(['react', 'momentjs'], function (React, moment) {
   });
 
   React.render(
-    <Github username="jhenriquez" repositories="4" useLanguageIcons />,
+    <Github username="jhenriquez" repositories="4" />,
     document.getElementById('github-content')
     );
 });

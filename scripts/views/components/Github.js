@@ -1,5 +1,12 @@
 define(['react', 'momentjs'], function (React, moment) {
 
+  var languageClassMap = {
+    'C#': 'icon-csharp',
+    'JavaScript': 'icon-javascript',
+    'CSS': 'icon-css',
+    'Ruby': 'icon-ruby'
+  };
+
   var Github = React.createClass({displayName: "Github",
     
     getInitialState: function () {
@@ -61,37 +68,26 @@ define(['react', 'momentjs'], function (React, moment) {
           React.createElement("div", {className: "loading-icon rotate"})
           );
       }
-
-      var repositoryIcon = this.props.useLanguageIcons ?
-          (React.createElement("i", {className: "fa fa-github fa-2x repository-icon"}))
-          : (React.createElement("img", {className: "repository-icon", src: "https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"}));
-
+      var self = this;
       var repositories = [];
       
 
       this.state.repos.forEach(function (repository, rep_index) {
         var langs = repository.languages.map(function (lang, lang_index) {
-            return(
-              React.createElement("li", {key: lang_index}, lang)
-              );
+            return (React.createElement("i", {key: lang_index, className: languageClassMap[lang], title: lang}));
         });
 
         repositories.push(
             React.createElement("div", {key: rep_index, className: "repository"}, 
-              repositoryIcon, 
+              React.createElement("i", {className: "fa fa-github fa-2x repository-icon"}), 
               React.createElement("div", {className: "repository-name"}, 
                 React.createElement("a", {href: repository.url}, repository.name)
               ), 
               React.createElement("p", {className: "repository-description"}, 
                 repository.description
               ), 
-              React.createElement("div", null, 
-                React.createElement("div", {className: "repository-languages"}, 
-                "Languages:"
-                ), 
-                React.createElement("ul", {className: "repository-languages"}, 
-                  langs
-                )
+              React.createElement("ul", {className: "repository-languages"}, 
+                langs
               ), 
               React.createElement("p", {className: "repository-last-update"}, 
                 "Last Updated: ", repository.lastUpdate
@@ -109,7 +105,7 @@ define(['react', 'momentjs'], function (React, moment) {
   });
 
   React.render(
-    React.createElement(Github, {username: "jhenriquez", repositories: "4", useLanguageIcons: true}),
+    React.createElement(Github, {username: "jhenriquez", repositories: "4"}),
     document.getElementById('github-content')
     );
 });

@@ -159,6 +159,7 @@ nav li a {
 .repository-last-update {
   clear:both;
   font-size: 13px;
+  margin-top: 0;
   margin-left: 5px;
   text-align: left;
 }
@@ -170,33 +171,22 @@ nav li a {
   font-size: 30px;
 }
 
-.repository-languages:first-child {
-  clear:left;
-  font-weight: bold;
-}
-
 .repository-languages {
-  margin-left: 5px;
   float: left;
   text-align: left;
   padding: 0;
   font-size: 15px;
 }
 
-.repository-languages li {
-  display: inline;
+.repository-languages i {
   margin-left: 5px;
-  font-size: 12px;
-}
-
-.repository-languages li:first-child {
-  margin: 0;
+  font-size: 20px;
 }
 
 @media (max-width: 800px){
   .repository {
     max-width: 80%;
-    height: 150px;
+    height: 120px;
   }
 
   .repository-section-description {
@@ -210,5 +200,10 @@ nav li a {
   .repositories-container {
     padding-left: 20%;
     padding-top: 10%;
+  }
+
+  .repository-languages {
+    margin-top: 5px;
+    clear: both;
   }
 } 
