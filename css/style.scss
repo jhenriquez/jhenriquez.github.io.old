@@ -2,14 +2,17 @@
 
 ---
 
-a { color: inherit; }
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+body, html {
+  margin: 0;
+}
 
 #hello {
   background-color: #97CCEE;
-}
-
-#github-content {
-  background-color: #FFFFFF;
 }
 
 #Other {
@@ -59,11 +62,10 @@ a { color: inherit; }
 }
 
 .loading-icon {
-  vertical-align: middle;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: 0 auto;
+  margin: auto;
   border-bottom: 1px solid;
   border-left: 1px solid;
 }
@@ -120,8 +122,8 @@ nav li a {
 }
 
 .repository-section-description {
-  text-align: center;
   display: table;
+  text-align: center;
   width: 100%;
   height: 200px;
 }
@@ -132,15 +134,17 @@ nav li a {
 }
 
 .repositories-container {
-  margin: 0 auto;
-  padding-left: 25%;
-  vertical-align: middle;
+  margin: auto;
+  max-width: 800px;
 }
 
 .repository {
-  float: left;
+  display: inline-block;
   width: 350px;
   height: 150px;
+  vertical-align: top;
+  margin: 5px;
+  padding: 10px;
 }
 
 .repository-name {
@@ -160,7 +164,6 @@ nav li a {
 }
 
 .repository-last-update {
-  clear:both;
   font-size: 13px;
   margin-top: 0;
   margin-left: 5px;
@@ -203,9 +206,9 @@ nav li a {
   font-size: 15px;
 }
 
-@media (max-width: 800px){
+@media (max-width: 720px){
   .repository {
-    max-width: 80%;
+    display: inline-block;
     height: 120px;
   }
 
@@ -213,17 +216,16 @@ nav li a {
     display: none;
   }
 
-  .repository-description {
+ .repository-description {
     display: none;
-  }
-
-  .repositories-container {
-    padding-left: 20%;
-    padding-top: 10%;
   }
 
   .repository-languages {
     margin-top: 5px;
     clear: both;
   }
-} 
+
+  .repositories-container {
+    width: 250px;
+  }
+}   
