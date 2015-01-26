@@ -209,7 +209,8 @@ nav li a {
 @media (max-width: 720px){
   .repository {
     display: inline-block;
-    height: 120px;
+    height: 20%;
+    margin: auto;
   }
 
   .repository-section-description {
@@ -228,4 +229,4 @@ nav li a {
   .repositories-container {
     width: 250px;
   }
-}   
+}
