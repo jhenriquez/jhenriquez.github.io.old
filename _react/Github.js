@@ -1,4 +1,4 @@
-define(['react'], function (React) {
+define(['react', 'momentjs'], function (React, moment) {
 
   var Github = React.createClass({
     
