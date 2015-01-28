@@ -1,22 +1,35 @@
 ---
-
 ---
 
+$fonts-google-narrow: 'PT Sans Narrow', sans-serif;
+$fonts-google-open: 'Open Sans Condensed', sans-serif;
+
+$colors-fall: #31415A;
+$colors-white: #FFFFFF;
+$colors-deep:  #1CBABC;
+$colors-light: #97CCEE;
+
 a { 
-  color: inherit;
+  color: $colors-fall;
   text-decoration: none;
+}
+
+strong {
+  color: $colors-fall;
 }
 
 body, html {
   margin: 0;
+  overflow: hidden;
+  font-family: $fonts-google-narrow;
 }
 
 #hello {
-  background-color: #1CBABC;
+  background-color: $colors-deep;
 }
 
 #more-info {
-  background-color: #97CCEE;
+  background-color: $colors-light;
 }
 
 .loading-screen {
@@ -24,7 +37,7 @@ body, html {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF; 
+  background-color: $colors-white; 
 }
 
 @-webkit-keyframes rotation {
@@ -81,7 +94,7 @@ body, html {
 .col-content {
   font-weight: bold;
   text-align: center;
-  color: #FFFFFF;
+  color: $colors-white;
 }
 
 .avatar {
@@ -105,7 +118,7 @@ nav#in-page-menu {
 }
 
 nav div {
-  color: #fff;
+  color: $colors-fall;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -114,7 +127,7 @@ nav div {
 }
 
 nav div.active {
-  background-color: #fff;
+  background-color: $colors-fall;
 }
 
 nav li a {
@@ -131,8 +144,8 @@ nav li a {
 .section-description-content {
   display: table-cell;
   vertical-align: middle;
-  font-family: Papyrus, Fantasy;
   font-size: 20px;
+  color: $colors-fall;
 }
 
 .repositories-container {
@@ -151,15 +164,17 @@ nav li a {
 
 .repository-name {
   text-align: left;
-  color: #1CBABC; 
+  font-family: $fonts-google-open;
+  color: $colors-deep;
   padding-top: 5px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .repository-description {
   clear:both;
   font-size: 16px;
+  font-family: $fonts-google-open;
   text-align: left;
   margin-left: 5px;
   margin-bottom: 0;
@@ -197,17 +212,15 @@ nav li a {
   position: absolute;
   bottom: 35px;
   font-size: 35px;
-  color: #FFFFFF;
+  color: $colors-white;
 }
 
 .welcome-header {
-  font-size: 30px;
-  font-family: Papyrus, Fantasy;
+  font-size: 25px;
 }
 
 .welcome-text {
-  font-size: 15px;
-  font-family: Papyrus, Fantasy;
+  font-size: 20px;
   width: 60%;
   margin: auto;
 }
@@ -224,22 +237,22 @@ nav li a {
 @media (max-width: 720px){
   .repository {
     display: inline-block;
-    height: 10%;
+    height: 85px;
     width: 250px;
     margin: auto;
+    padding: 0;
+    margin: 10px;
   }
 
   .repository-section-description {
     margin: 0 auto;
     text-align: center;
     width: 75%;
-    height: 100px;
+    height: 80px;
   }
 
   .section-description-content {
-    vertical-align: middle;
-    font-family: Papyrus, Fantasy;
-    font-size: 13px;
+    font-size: 15px;
   }
 
  .repository-description {
@@ -247,8 +260,8 @@ nav li a {
   }
 
   .repository-languages {
-    margin-top: 5px;
-    clear: both;
+    clear: none;
+    margin: 0;
   }
 
   .repositories-container {
