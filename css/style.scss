@@ -150,7 +150,7 @@ nav li a {
 
 .repositories-container {
   margin: auto;
-  width: 665px;
+  max-width: 665px;
 }
 
 .repository {
@@ -234,7 +234,7 @@ nav li a {
   animation: rotation 0.5s linear 1;
 }
 
-@media (max-width: 720px){
+@media (max-width: 540px) and (orientation: portrait) {
   .repository {
     display: inline-block;
     height: 85px;
@@ -266,5 +266,41 @@ nav li a {
 
   .repositories-container {
     width: 250px;
+  }
+}
+
+
+@media (max-width: 540px) and (orientation: landscape) {
+  .repository {
+    display: inline-block;
+    height: 85px;
+    width: 250px;
+    margin: auto;
+    padding: 0;
+    margin: 10px;
+  }
+
+  .repository-section-description {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+    height: 80px;
+  }
+
+  .section-description-content {
+    font-size: 15px;
+  }
+
+ .repository-description {
+    display: none;
+  }
+
+  .repository-languages {
+    clear: none;
+    margin: 0;
+  }
+
+  .repositories-container {
+    max-width: 520px;
   }
 }
