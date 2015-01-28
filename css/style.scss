@@ -303,4 +303,14 @@ nav li a {
   .repositories-container {
     max-width: 520px;
   }
+
+  .avatar-container {
+    display: inline-block;
+    max-width: 150px;    
+  }
+
+  .welcome-text {
+    display: inline-block;
+    width: 250px;
+  }
 }
