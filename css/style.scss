@@ -225,6 +225,18 @@ nav li a {
   margin: auto;
 }
 
+.spacer {
+  height: 200px;
+}
+
+.more-about-me {
+  margin: 0 auto;
+  max-width: 350px;
+  text-align: center;
+  font-size: 25px;
+  color: $colors-white;
+}
+
 .rotate-once:hover {
   font-size: 50px;
   -webkit-animation: rotation 0.5s linear 1;
