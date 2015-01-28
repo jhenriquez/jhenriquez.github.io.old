@@ -29,6 +29,7 @@ body, html {
 }
 
 #more-info {
+  position: relative;
   background-color: $colors-light;
 }
 
@@ -226,7 +227,7 @@ nav li a {
 }
 
 .spacer {
-  height: 200px;
+  height: 10em;
 }
 
 .more-about-me {
@@ -235,6 +236,16 @@ nav li a {
   text-align: center;
   font-size: 25px;
   color: $colors-white;
+}
+
+.power-by-container {
+  font-size: 20px;
+  color: $colors-fall;
+  position: absolute;
+  width: 100%;
+  bottom: 35px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .rotate-once:hover {
@@ -246,7 +257,7 @@ nav li a {
   animation: rotation 0.5s linear 1;
 }
 
-@media (max-width: 540px) and (orientation: portrait) {
+@media (max-width: 700px) and (orientation: portrait) {
   .repository {
     display: inline-block;
     height: 85px;
@@ -254,6 +265,10 @@ nav li a {
     margin: auto;
     padding: 0;
     margin: 10px;
+  }
+
+  .spacer {
+    height: 150px;
   }
 
   .repository-section-description {
@@ -282,7 +297,7 @@ nav li a {
 }
 
 
-@media (max-width: 600px) and (orientation: landscape) {
+@media (max-width: 700px) and (orientation: landscape) {
   .repository {
     display: inline-block;
     height: 85px;
@@ -346,5 +361,9 @@ nav li a {
     text-align: center;
     margin-left: 1em;
     margin-top: 5em;
+  }
+
+  .spacer {
+    height: 50px;
   }
 }
