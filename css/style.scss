@@ -270,11 +270,11 @@ nav li a {
 }
 
 
-@media (max-width: 540px) and (orientation: landscape) {
+@media (max-width: 600px) and (orientation: landscape) {
   .repository {
     display: inline-block;
     height: 85px;
-    width: 250px;
+    width: 225px;
     margin: auto;
     padding: 0;
     margin: 10px;
@@ -304,13 +304,35 @@ nav li a {
     max-width: 520px;
   }
 
+  .col-content {
+    text-align: left;
+  }
+
+  .avatar {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    width: 150px;
+  }
+
   .avatar-container {
     display: inline-block;
-    max-width: 150px;    
+    max-width: 150px; 
+    text-align: center;
+    margin-left: 2em;
   }
 
   .welcome-text {
+    font-size: 20px;
+    width: inherit;
+    margin: auto;
+  }
+
+  .welcome-text-container {    
     display: inline-block;
-    width: 250px;
+    vertical-align: top;
+    width: 300px;
+    text-align: center;
+    margin-left: 1em;
+    margin-top: 5em;
   }
 }
