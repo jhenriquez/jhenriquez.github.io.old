@@ -1,0 +1,58 @@
+---
+---
+
+/* General Spacing  */
+$spacing-unit:  30px;
+$content-width: 70%;
+$content-padding: 5px;
+
+/* Fonts */
+
+$fonts-regular: 'Cambay', sans-serif;
+$fonts-category: 'Surunna', serif;
+$fonts-source-code: 'Source Code Pro', serif;
+$fonts-source-size: 15px;
+$font-size-regular: 18px;
+
+/* Colors */
+$colors-code-background: #E3E3E3;
+
+
+/* Tags */
+
+code {
+  background: $colors-code-background;
+  padding: 3px;
+  border-radius: 5px;
+  font-family: $fonts-source-code;
+}
+
+.post {
+  font-family: $fonts-regular;
+  font-size: $font-size-regular;
+}
+
+.screen-content {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: $content-padding;
+}
+
+.post-header {
+  @extend .screen-content;
+}
+
+.post-header h1 {
+  text-align: right;
+}
+
+.post-content {
+  @extend .screen-content;
+  text-align: justify;
+}
+
+a {
+  color: black;
+}
+
+@import "syntax-highlighting";
