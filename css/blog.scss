@@ -116,7 +116,6 @@ nav {
 
 .nav-item {
   display: inline;
-
 }
 
 .highlight {
@@ -129,8 +128,6 @@ nav {
   font-size: $fonts-source-size;
 }
 
-@import "syntax-highlighting", "animations";
-
 @media (max-width: 400px) {
   nav {
     width: 84.5%;
@@ -140,3 +137,5 @@ nav {
     display: none;
   }
 }
+
+@import "syntax-highlighting", "animations";
