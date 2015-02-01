@@ -1,0 +1,21 @@
+---
+layout: post
+---
+
+<script type="text/javascript">
+  var category;
+
+  (function () {
+    var paramRegex = /[\?&]+([^=&\s]*)=([^&]*)/g;
+    var keyValue = paramRegex.exec(window.location.search);
+    while(keyValue) {
+      if(keyValue[1] === 'c') {
+        category = keyValue[2];
+      }
+      keyValue = paramRegex.exec(window.location.search);
+    }
+  })();
+
+</script>
+
+This page is my first failed attempt at creating a display by category section. So, nothing to see just yet.
