@@ -108,6 +108,17 @@ a {
   margin: 5px;
 }
 
+nav {
+  width: 96.2%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.nav-item {
+  display: inline;
+
+}
+
 .highlight {
   display: inline-block;
   background: $colors-code-background;
@@ -118,4 +129,14 @@ a {
   font-size: $fonts-source-size;
 }
 
-@import "syntax-highlighting";
+@import "syntax-highlighting", "animations";
+
+@media (max-width: 400px) {
+  nav {
+    width: 84.5%;
+  }
+
+  .categories {
+    display: none;
+  }
+}
