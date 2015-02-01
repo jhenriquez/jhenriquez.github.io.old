@@ -15,6 +15,34 @@
     ga('send', 'pageview');
   </script>
   <body>
+    <div class="home-heading">
+      <p class="heading">Wild, Wild Thoughts</p>
+      <span class="sub-heading">From the desk of Julio Henriquez<span>
+    </div>
+
+    <div class="rss" title="Subscribe via RSS">
+      <p>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
+          <i class="fa fa-rss fa-2x rotate-once"></i>
+        </a>
+      </p>
+    </div>
+
+    <nav>
+      <ul>
+        <li class="nav-item">
+          <a href="{{ "/blog" | prepend: site.baseurl }}">
+            HOME
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ "/archive" | prepend: site.baseurl }}">
+            ARCHIVE
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
     {{ content }}
   </body>
 </html>
