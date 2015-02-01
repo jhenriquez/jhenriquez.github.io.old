@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "animations";
+
 $fonts-google-narrow: 'PT Sans Narrow', sans-serif;
 $fonts-google-open: 'Open Sans Condensed', sans-serif;
 
@@ -58,23 +60,6 @@ body, html {
   }
 }
 
-@keyframes rotation {
-  from { 
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 .loading-icon {
   width: 30px;
   height: 30px;
@@ -82,14 +67,6 @@ body, html {
   margin: auto;
   border-bottom: 1px solid;
   border-left: 1px solid;
-}
-
-.rotate {
-  -webkit-animation: rotation 2s linear infinite;
-  -moz-animation: rotation 2s linear infinite;
-  -ms-animation: rotation 2s linear infinite;
-  -o-animation: rotation 2s linear infinite;
-  animation: rotation 2s linear infinite;
 }
 
 .col-content {
@@ -246,15 +223,6 @@ nav li a {
   bottom: 35px;
   text-align: center;
   margin: 0 auto;
-}
-
-.rotate-once:hover {
-  font-size: 50px;
-  -webkit-animation: rotation 0.5s linear 1;
-  -moz-animation: rotation 0.5s linear 1;
-  -ms-animation: rotation 0.5s linear 1;
-  -o-animation: rotation 0.5s linear 1;
-  animation: rotation 0.5s linear 1;
 }
 
 @media (max-width: 700px) and (orientation: portrait) {
