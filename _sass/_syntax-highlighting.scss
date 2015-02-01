@@ -2,13 +2,6 @@
  * Syntax highlighting styles
  */
 .highlight {
-    display: inline-block;
-    background: $colors-code-background;
-    border-radius: 0 25px 25px 0;
-    padding: $spacing-unit / 3;
-    margin-bottom: $spacing-unit / 2;
-    font-family: $fonts-source-code;
-    font-size: $fonts-source-size;
 
     .c     { color: #998; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error

@@ -16,7 +16,7 @@ $font-size-regular: 18px;
 
 /* Colors */
 $colors-code-background: #E3E3E3;
-
+$colors-deep:  #1CBABC;
 
 /* Tags */
 
@@ -26,6 +26,12 @@ code {
   border-radius: 5px;
   font-family: $fonts-source-code;
 }
+
+a {
+  color: black;
+}
+
+/* Classes */
 
 .post {
   font-family: $fonts-regular;
@@ -38,12 +44,12 @@ code {
   padding: $content-padding;
 }
 
-.post-header {
-  @extend .screen-content;
-}
-
 .post-header h1 {
   text-align: right;
+}
+
+.post-header {
+  @extend .screen-content;
 }
 
 .post-content {
@@ -51,8 +57,27 @@ code {
   text-align: justify;
 }
 
-a {
-  color: black;
+.categories {
+  text-align: right;
+}
+
+.category {
+  display: inline;
+  font-weight: bold;
+  background: $colors-deep;
+  margin: 0 3px;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.highlight {
+  display: inline-block;
+  background: $colors-code-background;
+  border-radius: 0 25px 25px 0;
+  padding: $spacing-unit / 3;
+  margin-bottom: $spacing-unit / 2;
+  font-family: $fonts-source-code;
+  font-size: $fonts-source-size;
 }
 
 @import "syntax-highlighting";
