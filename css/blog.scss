@@ -11,6 +11,8 @@ $content-padding: 5px;
 $fonts-regular: 'Cambay', sans-serif;
 $fonts-category: 'Surunna', serif;
 $fonts-source-code: 'Source Code Pro', serif;
+$fonts-decorative: 'Montserrat', sans-serif;
+
 $fonts-source-size: 15px;
 $font-size-regular: 18px;
 
@@ -68,6 +70,42 @@ a {
   margin: 0 3px;
   padding: 0 5px;
   border-radius: 5px;
+}
+
+.category.no-background {
+  background: #FFFFFF;
+}
+
+.post-list {
+  @extend .screen-content;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+.post-link {
+  text-decoration: none;
+}
+
+.home-heading {
+  @extend .screen-content;
+  font-family: $fonts-decorative;
+  text-align: center;
+}
+
+.heading {
+  font-size: 20px;
+}
+
+.sub-heading {
+  font-size: 12px;
+}
+
+.rss {
+  text-align: center;
+}
+
+.return-home {
+  margin: 5px;
 }
 
 .highlight {
