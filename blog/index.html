@@ -4,30 +4,10 @@ layout: default
 
 <div class="home">
 
-  <div class="home-heading">
-    <p class="heading">Wild, Wild Thoughts</p>
-    <span class="sub-heading">From the desk of Julio Henriquez<span>
-  </div>
-
-  <div class="rss" title="Subscribe via RSS">
-    <p>
-      <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
-        <i class="fa fa-rss fa-2x rotate-once"></i>
-      </a>
-    </p>
-  </div>
-
-  <nav>
-    <ul>
-      <a href="{{ "/archive" | prepend: site.baseurl }}">
-        <li class="nav-item">
-          ARCHIVE
-        </li>
-      </a>
-    </ul>
-  </nav>
-
   <ul class="post-list">
+
+    {% include no-posts-warning.html %}
+
     {% for post in site.posts limit: 5 %}
       <li>
         <h2>

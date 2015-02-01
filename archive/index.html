@@ -2,4 +2,17 @@
 layout: default
 ---
 
-<h3>Hello, archive!</h3>
+<div class="archive-list">
+
+  {% include no-posts-warning.html %}
+
+  {% if site.posts.size > 0 %}
+  <h3>These are the posts written in this blog.</h3>
+  <div class="archive-item">
+    {% for post in site.posts %}
+    <span class="archive-post-meta">{{ post.date | date: "%b %-d, %Y" }} • </span>
+    <a href="" class="archive-post-title">{{ post.title }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
