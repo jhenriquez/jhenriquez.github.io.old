@@ -8,11 +8,11 @@ layout: default
 
   {% if site.posts.size > 0 %}
   <h3>These are the posts written in this blog.</h3>
+  {% for post in site.posts %}
   <div class="archive-item">
-    {% for post in site.posts %}
     <span class="archive-post-meta">{{ post.date | date: "%b %-d, %Y" }} • </span>
     <a href="" class="archive-post-title">{{ post.title }}</a>
-    {% endfor %}
   </div>
+  {% endfor %}
   {% endif %}
 </div>
