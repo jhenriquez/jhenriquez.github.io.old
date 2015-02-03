@@ -22,6 +22,24 @@ $colors-deep:  #1CBABC;
 
 /* Tags */
 
+blockquote {
+  display: inline-block;
+  padding: 5px;
+  background-color: $colors-code-background;
+  border-radius: 5px;
+}
+
+blockquote::before {
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
 code {
   background: $colors-code-background;
   padding: 3px;
@@ -59,6 +77,10 @@ a {
   text-align: justify;
 }
 
+.post-content::first-letter {
+  font-size: 200%;
+}
+
 .categories {
   text-align: right;
 }
@@ -80,6 +102,10 @@ a {
   @extend .screen-content;
   margin: 0 auto;
   list-style-type: none;
+}
+
+.post-list p::first-letter {
+  font-size: 200%;
 }
 
 .post-link {
