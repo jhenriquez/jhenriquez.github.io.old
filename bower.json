@@ -57,6 +57,9 @@
     "*": {
       "scripts": [
         "*.js"
+      ],
+      "css": [
+        "*.css"
       ]
     }
   },
@@ -67,6 +70,7 @@
     "react": "~0.12.2",
     "momentjs": "~2.9.0",
     "font-awesome": "~4.3.0",
-    "font-mfizz": "~2.0.0"
+    "font-mfizz": "~2.0.0",
+    "normalize.css": "~3.0.2"
   }
 }
