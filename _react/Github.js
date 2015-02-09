@@ -104,8 +104,5 @@ define(['react', 'momentjs'], function (React, moment) {
     }
   });
 
-  React.render(
-    <Github username="jhenriquez" repositories="4" />,
-    document.getElementById('github-content')
-    );
+  return Github;
 });
