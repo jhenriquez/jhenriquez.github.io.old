@@ -1,7 +1,7 @@
 require(['../main'], function () {
   require(
-    ['jquery','fullpage','views/components/Github'],
-    function ($) {
+    ['jquery', 'react', 'views/components/Github','fullpage'],
+    function ($, React, Github) {
 
       $('#content').fullpage({
         anchors: ['Section1', 'Section2', 'Section3'],
@@ -12,5 +12,10 @@ require(['../main'], function () {
           }, 1000);
         }
       });
+
+      React.render(
+        React.createElement(Github, {username: "jhenriquez", repositories: "4"}),
+        document.getElementById('github-content')
+      );
   });
 });
