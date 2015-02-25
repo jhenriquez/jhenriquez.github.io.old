@@ -9,7 +9,7 @@ define(['react', 'jquery'], function (React) {
       $.get('http://ws.audioscrobbler.com/2.0/', {
           method: 'user.getrecenttracks',
           user: this.props.username,
-          api_key: this.props.key,
+          api_key: this.props.apiKey,
           format: 'json'
         },
         function (data, status) {
