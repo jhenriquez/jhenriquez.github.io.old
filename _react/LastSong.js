@@ -31,14 +31,16 @@ define(['react', 'jquery'], function (React) {
  
     render: function () {
       if (!this.state) {
-        return (
-          <div className="last-song-container">
-            <img src={this.state.image} className="last-song-image" />
-            <div className="last-song-name">{this.state.name}</div>
-            <div className="last-song-album">{this.state.album}</div>
-          </div>
-          );
+        return (<span>Loading...</span>);
       }
+
+      return (
+        <div className="last-song-container">
+          <img src={this.state.image} className="last-song-image" />
+          <div className="last-song-name">{this.state.name}</div>
+          <div className="last-song-album">{this.state.album}</div>
+        </div>
+        );
     }
   });
 
