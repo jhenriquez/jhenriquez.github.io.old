@@ -2,7 +2,7 @@ define(['react', 'jquery'], function (React) {
 
   var LastSong = React.createClass({
     getInitialState: function () {
-      return undefined;
+      return null;
     },
 
     getLastSong: function () {
@@ -35,7 +35,7 @@ define(['react', 'jquery'], function (React) {
           <div className="last-song-container">
             <img src={this.state.image} className="last-song-image" />
             <div className="last-song-name">{this.state.name}</div>
-            <div className="last-song-name">{this.state.album}</div>
+            <div className="last-song-album">{this.state.album}</div>
           </div>
           );
       }

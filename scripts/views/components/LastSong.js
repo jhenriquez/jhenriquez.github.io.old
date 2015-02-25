@@ -2,7 +2,7 @@ define(['react', 'jquery'], function (React) {
 
   var LastSong = React.createClass({displayName: "LastSong",
     getInitialState: function () {
-      return undefined;
+      return null;
     },
 
     getLastSong: function () {
@@ -35,7 +35,7 @@ define(['react', 'jquery'], function (React) {
           React.createElement("div", {className: "last-song-container"}, 
             React.createElement("img", {src: this.state.image, className: "last-song-image"}), 
             React.createElement("div", {className: "last-song-name"}, this.state.name), 
-            React.createElement("div", {className: "last-song-name"}, this.state.album)
+            React.createElement("div", {className: "last-song-album"}, this.state.album)
           )
           );
       }
