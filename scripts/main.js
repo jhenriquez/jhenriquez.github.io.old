@@ -1,5 +1,4 @@
 requirejs.config({
-	baseUrl: './scripts',
 	paths: {
 		jquery: 'jquery/jquery.min',
 		fullpage: 'jquery/jquery.fullPage.min',

@@ -1,4 +1,4 @@
-define(['react', 'momentjs'], function (React, moment) {
+define(['react', 'momentjs', 'jquery'], function (React, moment) {
 
   var languageClassMap = {
     'C#': 'icon-csharp',
@@ -103,6 +103,11 @@ define(['react', 'momentjs'], function (React, moment) {
         );
     }
   });
+
+  /* Exports the component as CommonJS module. For testing. */
+  if (typeof(module) == 'object' && module.exports) {
+    module.exports = Github;
+  }
 
   return Github;
 });

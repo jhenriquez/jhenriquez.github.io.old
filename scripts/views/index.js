@@ -1,4 +1,4 @@
-require(['../main'], function () {
+require(['main'], function () {
   require(
     ['jquery', 'react', 'views/components/Github','fullpage'],
     function ($, React, Github) {
