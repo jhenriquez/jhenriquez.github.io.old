@@ -13,7 +13,8 @@ require(['main'], function () {
         }
       });      
 
-      var toggle = new MenuToggle('.navigation', '.toggle-menu', 'open');
+      var menuToggle = new MenuToggle('.navigation', '.toggle-menu', 'open');
+      var menuButtomToggle = new MenuToggle('.menu-line', '.toggle-menu', 'menu-line-open');
 
       React.render(
         React.createElement(Github, {username: "jhenriquez", repositories: "4"}),
