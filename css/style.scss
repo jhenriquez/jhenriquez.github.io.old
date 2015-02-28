@@ -235,12 +235,12 @@ nav li a {
   display: inline-block;
   width: 0;
   height: 100%;
-  background-color:  black;
+  background-color:  $colors-white;
   transition: width 1s ease;
 }
 
 .open {
-  width: 500px;
+  width: 30%;
 }
 
 .content-wrap {
@@ -276,7 +276,7 @@ nav li a {
   display: inline-block;
   height: 100%;
   width: 5px;
-  background-color: $colors-white;
+  background-color: $colors-light;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -317,6 +317,10 @@ nav li a {
 
   .repositories-container {
     width: 250px;
+  }
+
+  .open {
+    width: 80%;
   }
 }
 
