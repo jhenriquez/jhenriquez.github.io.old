@@ -23,6 +23,7 @@
   "homepage": "https://github.com/jhenriquez/jhenriquez.github.io",
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-bower-task": "~0.4.0"
+    "grunt-bower-task": "~0.4.0",
+    "grunt-mocha": "^0.4.12"
   }
 }

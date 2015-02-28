@@ -8,8 +8,14 @@ module.exports = function (g) {
 					layout: function (type) { return type; }
 				}
 			}
+		},
+		mocha: {
+			specs: {
+				src: ['_specs/**/*.html']
+			}
 		}
 	});
 
 	g.loadNpmTasks('grunt-bower-task');
+	g.loadNpmTasks('grunt-mocha');
 };
