@@ -26,7 +26,7 @@ define(function () {
 
     this.toggleButtom.addEventListener('click', function (e) {
         self.toggleElement.classList.toggle(self.toggleClass);
-    }, true);
+    }, false);
   }
 
   return MenuToggle;
