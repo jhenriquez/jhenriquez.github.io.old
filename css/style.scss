@@ -237,10 +237,11 @@ nav li a {
   height: 100%;
   background-color:  $colors-white;
   transition: width 1s ease;
+  overflow: hidden;
 }
 
 .open {
-  width: 30%;
+  width: 20%;
 }
 
 .content-wrap {
@@ -276,9 +277,26 @@ nav li a {
   display: inline-block;
   height: 100%;
   width: 5px;
-  background-color: $colors-light;
+  background-color: black;
   margin-left: 2px;
   margin-right: 2px;
+}
+
+.navigation-menu {
+  list-style-type: none;
+  text-align: center;
+  margin-top: 5em;
+}
+
+.navigation-menu li {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $colors-deep;
+}
+
+.navigation-menu li:hover {
+  background: $colors-light;
+  cursor:pointer;
 }
 
 @media (max-width: 700px) and (orientation: portrait) {
