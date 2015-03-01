@@ -15,6 +15,7 @@ require(['main'], function () {
 
       var menuToggle = new MenuToggle('.navigation', '.toggle-menu', 'open');
       var menuButtomToggle = new MenuToggle('.menu-line', '.toggle-menu', 'menu-line-open');
+      var inpageToggle = new MenuToggle('#in-page-menu', '.toggle-menu', 'nav-hide-mobile');
 
       React.render(
         React.createElement(Github, {username: "jhenriquez", repositories: "4"}),

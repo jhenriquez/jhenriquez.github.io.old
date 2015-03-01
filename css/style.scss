@@ -254,7 +254,7 @@ nav li a {
 .toggle-menu {
   position: absolute;
   z-index: 2;
-  top: 30px;
+  top: 35px;
   left: 15px;
   width: 35px;
   height: 35px;
@@ -270,14 +270,13 @@ nav li a {
   background-color: $colors-fall;
   margin-top: 2px;
   margin-bottom: 2px;
-  transition: width 1.5s ease, background 2s ease;
+  transition: width 1.5s ease;
 }
 
 .menu-line-open {
   display: inline-block;
   height: 100%;
   width: 5px;
-  background-color: black;
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -286,6 +285,7 @@ nav li a {
   list-style-type: none;
   text-align: center;
   margin-top: 5em;
+  padding-left: 0;
 }
 
 .navigation-menu li {
@@ -339,6 +339,10 @@ nav li a {
 
   .open {
     width: 80%;
+  }
+
+  .nav-hide-mobile {
+    display: none;
   }
 }
 
@@ -411,5 +415,9 @@ nav li a {
 
   .spacer {
     height: 50px;
+  }
+
+  .nav-hide-mobile {
+    display: none;
   }
 }
