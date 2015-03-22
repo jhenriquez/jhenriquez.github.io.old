@@ -61,7 +61,9 @@ define(['react', 'jquery'], function (React) {
 
       return (
         React.createElement("div", {className: "last-song-container"}, 
-          React.createElement("img", {src: this.state.image, className: "last-song-image"}), 
+          React.createElement("div", {className: "last-song-img-container"}, 
+            React.createElement("img", {src: this.state.image, className: "last-song-image"})
+          ), 
           React.createElement("div", {className: "last-song-content"}, 
             React.createElement("div", {className: "last-song-name"}, 
               React.createElement("span", {className: "last-song-tag"}, "Title:"), this.state.name

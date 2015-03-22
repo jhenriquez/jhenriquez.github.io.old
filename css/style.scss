@@ -299,6 +299,69 @@ nav li a {
   cursor:pointer;
 }
 
+.last-song-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0.5em;
+  width: 400px;
+  font-family: 'Pacifico', cursive;
+}
+
+.last-song-img-container {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1em;
+}
+
+.last-song-image {
+  display: inline-block;
+  min-width: 75px;
+  min-height: 75px;
+  width: 100px;
+  height: 100px;        
+}
+
+.last-song-content {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.last-song-name {
+  font-size: 1.5em;
+}
+
+.last-song-name::after {
+  display: block;
+  content: '';
+  border-bottom: 2px solid black;
+  margin-top: 1em;
+  margin-bottom: 1em;        
+}
+
+.last-song-artist {
+  font-size: 2em;
+}
+
+.last-song-album {
+  display: none;
+}
+
+.last-song-tag {
+  display: none;
+  font-weight: bold;
+  width: 60px;
+  text-align: right;
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.last-song-powerby {
+  font-size: 6em;
+  text-align: center;
+}
+
 @media (max-width: 700px) and (orientation: portrait) {
   .repository {
     display: inline-block;

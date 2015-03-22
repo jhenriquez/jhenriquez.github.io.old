@@ -61,7 +61,9 @@ define(['react', 'jquery'], function (React) {
 
       return (
         <div className="last-song-container">
-          <img src={this.state.image} className="last-song-image" />
+          <div className="last-song-img-container">
+            <img src={this.state.image} className="last-song-image" />
+          </div>
           <div className="last-song-content">
             <div className="last-song-name">
               <span className="last-song-tag">Title:</span>{this.state.name}
