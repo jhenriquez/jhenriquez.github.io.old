@@ -315,14 +315,14 @@ nav li a {
 
 .last-song-image {
   display: inline-block;
-  min-width: 75px;
-  min-height: 75px;
+  min-width: 200px;
+  min-height: 200px;
   width: 100px;
   height: 100px;        
 }
 
 .last-song-content {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   text-align: center;
   margin: 0 auto;
