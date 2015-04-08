@@ -66,17 +66,17 @@ define(['react', 'jquery'], function (React) {
           </div>
           <div className="last-song-content">
             <div className="last-song-name">
-              <span className="last-song-tag">Title:</span>{this.state.name}
+              {this.state.name}
             </div>
             <div className="last-song-album">
-              <span className="last-song-tag">Album:</span>{this.state.album}
+              {this.state.album}
             </div>
             <div className="last-song-artist">
-              <span className="last-song-tag">By:</span>{this.state.artist}
+              {this.state.artist}
             </div>
             <div className="last-song-powerby">
               <a href={this.state.url}>
-                <i className="fa fa-lastfm-square"></i>
+                <i className="fa fa-lastfm-square" title="Powered By Last.fm"></i>
               </a>
             </div>
           </div>

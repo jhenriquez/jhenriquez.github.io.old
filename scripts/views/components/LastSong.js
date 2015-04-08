@@ -66,17 +66,17 @@ define(['react', 'jquery'], function (React) {
           ), 
           React.createElement("div", {className: "last-song-content"}, 
             React.createElement("div", {className: "last-song-name"}, 
-              React.createElement("span", {className: "last-song-tag"}, "Title:"), this.state.name
+              this.state.name
             ), 
             React.createElement("div", {className: "last-song-album"}, 
-              React.createElement("span", {className: "last-song-tag"}, "Album:"), this.state.album
+              this.state.album
             ), 
             React.createElement("div", {className: "last-song-artist"}, 
-              React.createElement("span", {className: "last-song-tag"}, "By:"), this.state.artist
+              this.state.artist
             ), 
             React.createElement("div", {className: "last-song-powerby"}, 
               React.createElement("a", {href: this.state.url}, 
-                React.createElement("i", {className: "fa fa-lastfm-square"})
+                React.createElement("i", {className: "fa fa-lastfm-square", title: "Powered By Last.fm"})
               )
             )
           )
