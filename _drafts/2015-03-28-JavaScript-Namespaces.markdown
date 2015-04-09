@@ -12,11 +12,13 @@ Using objects to simulate namespaces is an ancient, and [universally preferable]
 The functionality provided by [protospace][1] is quite simple:
 
 * It allows you to register individual functions and objects under a given namespace from within a module (file).
-* It provides a mechanism to retrieve these namespaces.
+* It provides a mechanism to retrieve these namespaces anywhere else.
 
-Repectively protospace exposes register and bundling functions for these cases.
+Repectively protospace exposes registry and bundling functions for these cases.
 
-### <a href="#register"></a> Registries ###
+### Registries ###
+
+Registries store information about the functions (or objects) and the desired namespace. This is done with the Register method. This method not only stores the information, but also returns the built object.
 
 {% highlight JavaScript %}
 // Filename: module-A.js
@@ -36,7 +38,9 @@ module.exports = A;
 {% endhighlight %}
 
 
-### <a href="#bundle"></a> Bundles ###
+By default, we are using a Global domain for these namespaces, bit it also allows you to register named domains, with this we can for instance use the global namespace for our library and named one for stuff exposed for our specs.
+
+### Bundles ###
 
 {% highlight JavaScript %}
 // Filename: index.js
