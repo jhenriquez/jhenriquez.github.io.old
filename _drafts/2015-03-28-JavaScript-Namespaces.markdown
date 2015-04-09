@@ -18,7 +18,47 @@ Repectively protospace exposes [register](#register) and [bundling](#bundle) fun
 
 ### <a href="#register"></a> Registries ###
 
+{% highlight JavaScript %}
+// Filename: module-A.js
+
+var protospace = require('protospace');
+
+function A() { }
+
+protospace.register(A); // => { "A" : A }
+
+protospace.register(A, 'Some.Namespace'); // => { "Some": { "Namespace": { "A": A } } }
+
+protospace.register(A, 'Some.Namespace', 'PropertyName'); // => { "Some": { "Namespace": { "PropertyName": A } } }
+
+module.exports = A;
+
+{% endhighlight %}
+
+
 ### <a href="#bundle"></a> Bundles ###
+
+{% highlight JavaScript %}
+// Filename: index.js
+
+var protospace = require('protospace');
+require('path/to/module-A');
+
+module.exports = protospace.bundle(); 
+
+/* =>  
+  {
+   "A" : A,
+   "Some": {
+      "Namespace": {
+        "A": A,
+        "PropertyName": A     
+      }  
+    }
+  }
+
+*/
+{% endhighlight %}
 
 
 [1]: https://github.com/jhenriquez/protospace
