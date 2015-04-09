@@ -14,7 +14,7 @@ The functionality provided by [protospace][1] is quite simple:
 * It allows you to register individual functions and objects under a given namespace from within a module (file).
 * It provides a mechanism to retrieve these namespaces.
 
-Repectively protospace exposes [register](#register) and [bundling](#bundle) functions for these cases.
+Repectively protospace exposes register and bundling functions for these cases.
 
 ### <a href="#register"></a> Registries ###
 
